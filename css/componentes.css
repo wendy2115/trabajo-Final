@@ -1,4 +1,67 @@
-* {
+/* Formatea todo y las subpropiedades de todos para que no tengan margin ni padding; obliga a poner valores deseados en cada uso */
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  background-color: #f6dce0;
+}
+
+.header-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100%;
+  padding: 10px 20px;
+}
+
+.header-logo-link {
+  width: 150px;
+  height: 100%;
+}
+
+.header-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.header-nav-container {
+  flex: 1;
+  height: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-nav-link {
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+  color: black;
+}
+
+.header-nav-link:hover {
+  color: #ed39a5;
+}
+
+.header-nav-no-link {
+  color: #c63d8f;
+}
+
+.header-nav-no-link:hover {
+  color: #c63d8f;
 }
