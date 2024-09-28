@@ -65,3 +65,27 @@
 .header-nav-no-link:hover {
   color: #c63d8f;
 }
+
+.header-menu-button {
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  border: none;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+.header-button-icon {
+  width: 95%;
+  height: 95%;
+}
+@media screen and (max-width: 420px) {
+  .header-menu-button {
+    display: flex;
+  }
+
+  .header-nav-container {
+    display: none;
+  }
+}

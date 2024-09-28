@@ -56,7 +56,33 @@
   width: 75%;
   /* height: 100%; */
   object-fit: contain;
+  margin-bottom: 15px;
 }
 
 .container-eslogan {
+  color: white;
+  font-size: 19px;
+}
+
+.cita-link-container {
+  position: absolute;
+  bottom: 50px;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.cita-link {
+  background-color: #c63d8f;
+  padding: 10px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.cita-link:hover {
+  background-color: white;
+  color: #c63d8f;
 }
