@@ -2,6 +2,7 @@
   width: 100%;
   height: calc(100vh - 70px);
   position: relative;
+  margin-top: 70px;
 }
 
 .banner-imgs-container {
@@ -85,4 +86,33 @@
 .cita-link:hover {
   background-color: white;
   color: #c63d8f;
+}
+
+.seccion-2 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px;
+}
+
+.img-section-2 {
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 12px;
+  min-width: 10%;
+  max-height: 250px;
+}
+
+.img-section-2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.descripcion-section-2 {
+  margin: 12px;
+  min-width: 80%;
+  flex: 1;
+  
 }
