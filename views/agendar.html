@@ -6,6 +6,7 @@
     <title>Pide tu cita</title>
     <link rel="shortcut icon" href="../images/Spa.svg" type="image/x-icon" />
     <link rel="stylesheet" href="../css/componentes.css" />
+    <link rel="stylesheet" href="../css/agendar.css" />
   </head>
   <body>
     <header class="header-container">
@@ -25,6 +26,45 @@
         <a href="./contactos.html" class="header-nav-link">Contacto</a>
       </nav>
     </header>
+
+    <div class="agendar-container">
+      <div class="agendar-oscuro"></div>
+      <div style="position: relative; z-index: 10">
+        <h2 class="agendar-titulo">Pide tu Cita</h2>
+
+        <form class="agendar-formulario">
+          <label for="nombre">Nombre</label>
+          <input class="agendar-option" type="text" id="nombre" required />
+
+          <label for="email">Email</label>
+          <input class="agendar-option" type="email" id="email" required />
+
+          <label for="telefono">Teléfono</label>
+          <input class="agendar-option" type="tel" id="telefono" required />
+
+          <label for="servicio">Servicio</label>
+          <select class="agendar-option" name="servicio" id="servicio" required>
+            <option value="Babor Spress">Babor Spress</option>
+            <option value="Velos de Colágeno">Velos de Colágeno</option>
+          </select>
+
+          <label for="fecha">Dia/Hora</label>
+          <input
+            class="agendar-option"
+            type="datetime-local"
+            id="fecha"
+            required
+          />
+
+          <div class="agendar-polit-priv">
+            <input type="checkbox" id="polit-priv" required />
+            <a href="">Aceptar pólitica de privacidad</a>
+          </div>
+
+          <button class="agendar-enviar">Enviar</button>
+        </form>
+      </div>
+    </div>
 
     <footer class="footer-container">
       <div class="footer-logo">
