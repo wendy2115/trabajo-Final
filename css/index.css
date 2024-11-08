@@ -2,16 +2,15 @@
   width: 100%;
   height: calc(100vh - 70px);
   position: relative;
-  margin-top: 70px;
+  margin-top: 70px; /* en ves de dejar los 70px abajo los ponga arriba */
 }
 
 .banner-imgs-container {
   width: 100%;
   height: 100%;
-  z-index: 1;
-  overflow: hidden;
+  z-index: 1; /*poner la flotación y que quede debajo de todo*/
+  overflow: hidden; /*el contenido que se sale no se vea*/
   position: relative;
-  z-index: 1;
 }
 
 .banner-img {
@@ -20,12 +19,12 @@
   object-fit: cover;
   object-position: center;
   position: absolute;
-  opacity: 0;
+  opacity: 0; /*para que no se vea la imagen */
   transition: opacity 1.5s ease-in-out;
 }
 
 .banner-img-mostrar {
-  opacity: 1;
+  opacity: 1; /*Para que la imagen se vea*/
 }
 
 .banner-capa {
@@ -48,7 +47,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 5; /*Para que el logo este por encima de la capa*/
 }
 
 .logo-section1 {
@@ -56,7 +55,7 @@
   max-width: 700px;
   width: 75%;
   /* height: 100%; */
-  object-fit: contain;
+  object-fit: contain; /*Para que se amplie lo máximo del contenedor sin recortarse*/
   margin-bottom: 15px;
 }
 

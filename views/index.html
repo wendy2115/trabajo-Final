@@ -19,14 +19,15 @@
         /></a>
       </div>
 
-      <nav class="header-nav-container">
+      <nav id="header-nav-container" class="header-nav-container">
         <p class="header-nav-link header-nav-no-link">Inicio</p>
         <a href="./servicios.html" class="header-nav-link">Servicios</a>
         <a href="./agendar.html" class="header-nav-link">Pide tu Cita</a>
         <a href="./contactos.html" class="header-nav-link">Contacto</a>
       </nav>
 
-      <button class="header-menu-button">
+      <button class="header-menu-button" onclick="actionButton()">
+        <!--PARA cuando la pantalla esta pequeña el menu aparezca atraves de un botón-->
         <img
           class="header-button-icon"
           src="../images/menu-icon.svg"
@@ -36,6 +37,7 @@
     </header>
 
     <section class="banner-container">
+      <!-- Imagenes de fondo para el banner -->
       <div class="banner-imgs-container">
         <img
           id="banner-img-1"
@@ -58,6 +60,7 @@
       </div>
 
       <div class="banner-capa"></div>
+      <!--Capa para oscurecer las imágenes-->
 
       <div class="container-logo-section1">
         <img
@@ -76,7 +79,10 @@
 
     <section class="seccion-2">
       <div class="img-section-2">
-        <img src="../images/secccion-2.jpg" alt="" />
+        <img
+          src="../images/secccion-2.jpg"
+          alt="Aplicando mascarilla a una mujer"
+        />
       </div>
 
       <div class="descripcion-section-2">
@@ -220,6 +226,7 @@
 
         <div class="redes-sociales">
           <a class="social-link" href="https://twitter.com" target="_blank">
+            <!--TARGET-BLANK: Para que el Link se me abra en una ventana nueva-->
             <img src="../images/twitter-icono.svg" alt="twitter" />
           </a>
 
@@ -238,5 +245,6 @@
       </div>
     </footer>
     <script src="../js/baner.js"></script>
+    <script src="../js/menu.js"></script>
   </body>
 </html>
