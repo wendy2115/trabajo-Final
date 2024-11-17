@@ -83,13 +83,46 @@
   width: 95%;
   height: 95%;
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 620px) {
   .header-menu-button {
     display: flex;
+    cursor: pointer;
+    z-index: 10000000;
+  }
+
+  .header-menu-button-open {
+    background-color: #fff;
+    border-radius: 7px;
   }
 
   .header-nav-container {
     display: none;
+  }
+
+  /* Cuando el nav está abierto tiene estilos distintos para que se vea bien en formato mobile */
+  .header-nav-container-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000bb;
+    backdrop-filter: blur(5px);
+  }
+
+  .header-nav-container-open a {
+    color: #ffffff;
+  }
+
+  .header-nav-container-open a,
+  .header-nav-container-open p {
+    margin: 10px;
+    font-size: 22px;
   }
 }
 

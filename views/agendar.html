@@ -19,14 +19,25 @@
         /></a>
       </div>
       <!--Navegacion en todas las pestañas de la página-->
-      <nav class="header-nav-container">
+      <nav  id="header-nav-container" class="header-nav-container">
         <a href="./index.html" class="header-nav-link">Inicio</a>
         <a href="./servicios.html" class="header-nav-link">Servicios</a>
         <p class="header-nav-link header-nav-no-link">Pide tu Cita</p>
         <a href="./contactos.html" class="header-nav-link">Contacto</a>
       </nav>
 
-      <!--AQUI FALTA EL BUTTON DE NAVEGACION-->
+      <button
+        id="header-menu-button"
+        class="header-menu-button"
+        onclick="actionButton()"
+      >
+        <!--PARA cuando la pantalla esta pequeña el menu aparezca atraves de un botón-->
+        <img
+          class="header-button-icon"
+          src="../images/menu-icon.svg"
+          alt="Abrir menu"
+        />
+      </button>
     </header>
 
     <div class="agendar-container">
@@ -145,5 +156,7 @@
         </div>
       </div>
     </footer>
+    
+    <script src="../js/menu.js"></script>
   </body>
 </html>
