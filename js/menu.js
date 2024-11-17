@@ -2,7 +2,7 @@
 const nav = document.getElementById('header-nav-container').classList;
 const buttonMenu = document.getElementById('header-menu-button').classList;
 
-// Función que permite al bot+on alternan entre tener el menú abierto y cerrado. Para ello usamos los id del contenedor del menú y del botón para cambiar sus estilos al hacerse click.
+// Función que permite al botton alternan entre tener el menú abierto y cerrado. Para ello usamos los id del contenedor del menú y del botón para cambiar sus estilos al hacerse click.
 
 const actionButton = () => {
   console.log('NAV CLASES: ', nav.length);
