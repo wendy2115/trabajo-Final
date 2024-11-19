@@ -27,6 +27,7 @@
   width: 45%;
   max-width: 100%;
   min-width: 300px;
+  overflow: hidden;
   transform: translateX(50px);
 }
 
