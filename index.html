@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spa Canelita</title>
-    <link rel="shortcut icon" href="./images/Spa.svg" type="image/x-icon" >
-    <link rel="stylesheet" href="./css/componentes.css" >
+    <link rel="shortcut icon" href="./images/Spa.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/componentes.css" />
   </head>
   <body>
     <div class="welcome-container">
       <h1 class="welcome-title">
         WELCOME TO <b class="welcome-title-spa">SPA</b>CANELITA
       </h1>
-      <a href="./views/index.html">Ingresar</a>
     </div>
   </body>
-
- 
+  <script>
+    // Código para redireccionar de esta pantalla de bienvenida a la pantalla principal del sitio web
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        window.location.href = 'views/index.html'; // Sitio principal de la
+      }, 1000); // 1000 milisegundos es un segundo. Quiere decir que con tan solo un segundo después de mostrar la pantalla de bienvenida se redireccionará a la pestalla principal del sitio web
+    });
+  </script>
 </html>

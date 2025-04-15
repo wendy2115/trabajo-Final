@@ -1,0 +1,20 @@
+[
+  {
+    "titulo": "El masaje del momento es el spa capilar",
+    "subtitulo": "",
+    "descripcion": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+    "imagen": "https://media.timeout.com/images/106115840/image.jpg"
+  },
+  {
+    "titulo": "Abrimos las puertas a nuestra nueva sede",
+    "subtitulo": "En Cartagena",
+    "descripcion": "Dictum non rhoncus per iaculis in nisl fringilla, magnis semper platea sagittis vehicula molestie nullam, auctor bibendum facilisis ac eros accumsan. Porta dictumst habitant fames lacinia felis id quisque eu, congue libero scelerisque eros ad et vestibulum sagittis etiam, vel aliquam cras senectus parturient egestas nascetur.",
+    "imagen": "https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/data/ports/cartagena-spain/things-to-do/cartagena-spain-castle-of-cartagena.jpg?$472x300$"
+  },
+  {
+    "titulo": "Experiencias",
+    "subtitulo": "Esto es lo que nuestr@ clientes opinan",
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipiscing elit tempor, mus litora eget rutrum justo imperdiet consequat, lacinia penatibus nunc a conubia tortor accumsan.",
+    "imagen": "https://cdn-icons-png.flaticon.com/512/10936/10936461.png"
+  }
+]
