@@ -75,3 +75,11 @@
   color: #c63d8f;
   background-color: white;
 }
+
+.agendar-errors{
+  color: rgb(246, 95, 95);
+}
+
+.agendar-exitoso{
+  color: rgb(134, 247, 168);
+}

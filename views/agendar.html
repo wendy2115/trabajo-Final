@@ -46,55 +46,29 @@
       <div style="position: relative; z-index: 10">
         <h2 class="agendar-titulo">Pide tu Cita</h2>
 
-        <form class="agendar-formulario">
+        <form id="agendar-form" class="agendar-formulario">
           <label for="nombre">Nombre</label>
-          <input
-            class="agendar-option"
-            type="text"
-            id="nombre"
-            required
-            pattern="^[A-Za-zÁÉÍÓÚáéíóúñÑ]+$"
-          />
+          <input class="agendar-option" type="text" id="nombre" />
 
-          <label for="email">Email</label>
-          <input
-            class="agendar-option"
-            type="email"
-            id="email"
-            required
-            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-          />
+          <label for="apellidos">Apellidos</label>
+          <input class="agendar-option" type="text" id="apellidos" />
 
           <label for="telefono">Teléfono</label>
-          <input
-            class="agendar-option"
-            type="tel"
-            id="telefono"
-            required
-            pattern="^\d{9}$"
-          />
+          <input class="agendar-option" type="tel" id="telefono" />
+
+          <label for="email">Email</label>
+          <input class="agendar-option" type="email" id="email" />
+
+          <h2>Presupuesto</h2>
 
           <label for="servicio">Servicio</label>
           <select class="agendar-option" name="servicio" id="servicio">
-            <option value="Babor Spress">Babor Spress</option>
-            <option value="Velos de Colágeno">Velos de Colágeno</option>
-            <option value="Crash Ampollas">Crash Ampollas</option>
-            <option value="Cleopatra - Hidratante de Leche">
-              Cleopatra - Hidratante de Leche
-            </option>
-            <option value="Chocolaterapia">Chocolaterapia</option>
-            <option value="Vinoterapia">Vinoterapia</option>
-            <option value="Cerezoterapia">Cerezoterapia</option>
-            <option value="Spa Herbal">Spa Herbal</option>
-            <option value="Aceite de Oliva Cascantum">
-              Aceite de Oliva Cascantum
-            </option>
-            <option value="Tailandés con Bambú">Tailandés con Bambú</option>
-            <option value="Relax aceite de Oliva">Relax aceite de Oliva</option>
-            <option value="Masaje Circulatorio">Masaje Circulatorio</option>
-            <option value="Podal">Podal</option>
-            <option value="Pilates estudio">Pilates estudio</option>
-            <option value="Yoga">Yoga</option>
+            <option value="servicio-seleccionar">Seleccionar</option>
+            <option value="babor-spress">Babor Spress 35€</option>
+            <option value="velos-de-colágeno">Velos de Colágeno 60€</option>
+            <option value="crash-ampollas">Crash Ampollas 90€</option>
+            <option value="chocolaterapia">Chocolaterapia 55€</option>
+            <option value="vinoterapia">Vinoterapia 80€</option>
           </select>
 
           <label for="fecha">Dia/Hora</label>
@@ -110,7 +84,13 @@
             <a href="./polit-priv.html">Aceptar pólitica de privacidad</a>
           </div>
 
-          <button class="agendar-enviar">Enviar</button>
+          <div id="agendar-errors"></div>
+
+          <button onclick="validateForm()" class="agendar-enviar">
+            Enviar
+          </button>
+
+          <div id="agendar-exitoso"></div>
         </form>
       </div>
     </div>
@@ -220,6 +200,6 @@
       </div>
     </footer>
 
-    <script src="../js/menu.js"></script>
+    <script src="../js/presupuesto.js"></script>
   </body>
 </html>
