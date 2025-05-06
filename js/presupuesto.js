@@ -13,6 +13,7 @@ const validateForm = () => {
   const inputApellido = document.getElementById('apellidos').value;
   const inputTelefono = document.getElementById('telefono').value;
   const inputEmail = document.getElementById('email').value;
+  const checkboxPolitPriv = document.getElementById('polit-priv').checked;
   const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const regexOnlyText = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
   const regexOnlyNumber = /^[0-9]+$/;
@@ -36,10 +37,13 @@ const validateForm = () => {
 
   if (!regexEmail.test(inputEmail)) errors.push('Escribe un correo válido');
 
+  if (!checkboxPolitPriv)
+    errors.push('Debe aceptar las políticas de privacidad');
+
   console.log('errors:', errors);
 
   let errorsView = errors
-    .map((err, index) => {
+    .map((err) => {
       return `<p class="agendar-errors">${err}</p>
         `;
     })
@@ -58,11 +62,12 @@ const validateForm = () => {
 
 //Presupuesto
 
-const presupuestoView = (monto, descuentoPorcentaje, extras) => {
+const presupuestoView = (monto, descuentoPorcentaje, extras, duration) => {
   const view = document.getElementById('agendar-presupuesto');
 
   let descuentoValor = (monto * descuentoPorcentaje) / 100;
   let total = monto - descuentoValor + extras;
+  let days = duration === 0 ? 1 : duration;
 
   view.innerHTML = `
   <table class="agendar-tabla">
@@ -78,7 +83,7 @@ const presupuestoView = (monto, descuentoPorcentaje, extras) => {
         <td class="agendar-tabla-monto">${monto}€</td>
       </tr>
       <tr>
-        <td>Descuento al servicio por los dias seleccionados</td>
+        <td>Descuento al servicio por los dias seleccionados (${descuentoPorcentaje}%)</td>
         <td class="agendar-tabla-monto">-${descuentoValor}€</td>
       </tr>
       <tr>
@@ -86,8 +91,12 @@ const presupuestoView = (monto, descuentoPorcentaje, extras) => {
         <td class="agendar-tabla-monto">${extras}€</td>
       </tr>
       <tr>
-        <td>Total a pagar</td>
+        <td>Total a pagar por día</td>
         <td class="agendar-tabla-monto">${total}€</td>
+      </tr>
+      <tr>
+        <td>Total a pagar (${days} ${days === 1 ? 'día' : 'días'})</td>
+        <td class="agendar-tabla-monto">${total * days}€</td>
       </tr>
     </tbody>
   </table>
@@ -126,7 +135,7 @@ const setAmount = (value) => {
 
 document.getElementById('servicio').addEventListener('change', function () {
   setAmount(this.value);
-  presupuestoView(monto, descuentoPorcentaje, extras);
+  presupuestoView(monto, descuentoPorcentaje, extras, duration);
 });
 
 //Duración
@@ -158,7 +167,7 @@ const setDuration = (daysStr) => {
 
 document.getElementById('duracion').addEventListener('change', function () {
   setDuration(this.value);
-  presupuestoView(monto, descuentoPorcentaje, extras);
+  presupuestoView(monto, descuentoPorcentaje, extras, duration);
 });
 
 // Extras
@@ -173,10 +182,10 @@ const setExtras = (value, isAdd) => {
 
 document.getElementById('extra-diez').addEventListener('change', function () {
   setExtras(5, this.checked);
-  presupuestoView(monto, descuentoPorcentaje, extras);
+  presupuestoView(monto, descuentoPorcentaje, extras, duration);
 });
 
 document.getElementById('extra-masaje').addEventListener('change', function () {
   setExtras(10, this.checked);
-  presupuestoView(monto, descuentoPorcentaje, extras);
+  presupuestoView(monto, descuentoPorcentaje, extras, duration);
 });
