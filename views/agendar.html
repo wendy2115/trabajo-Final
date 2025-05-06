@@ -59,7 +59,7 @@
           <label for="email">Email</label>
           <input class="agendar-option" type="email" id="email" />
 
-          <h2>Presupuesto</h2>
+          <h2 class="extras-subtitle">Presupuesto</h2>
 
           <label for="servicio">Servicio</label>
           <select class="agendar-option" name="servicio" id="servicio">
@@ -78,6 +78,30 @@
             id="fecha"
             required
           />
+
+          <!-- Plazo de días del servicio prestado -->
+          <label for="duracion"
+            >Durante cuantos dias deseas recibir el Servicio</label
+          >
+          <input id="duracion" class="agendar-option" type="number" />
+
+          <!--EXTRAS  -->
+          <h2 class="extras-subtitle">Extras</h2>
+          <div class="agendar-extras">
+            <input type="checkbox" id="extra-diez" />
+            <label for="extra-diez">10 minutos más (5€)</label>
+          </div>
+
+          <div class="agendar-extras">
+            <input type="checkbox" id="extra-masaje" />
+            <label for="extra-masaje"
+              >Prueba de Masaje Circulatorio (10€)</label
+            >
+          </div>
+
+          <!-- PRESUPUESTO -->
+           <h2 class="extras-subtitle">Presupuesto Final</h2>
+           <div id="agendar-presupuesto"></div>
 
           <div class="agendar-polit-priv">
             <input type="checkbox" id="polit-priv" required />

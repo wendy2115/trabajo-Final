@@ -57,7 +57,45 @@ const validateForm = () => {
 };
 
 //Presupuesto
+
+const presupuestoView = (monto, descuentoPorcentaje, extras) => {
+  const view = document.getElementById('agendar-presupuesto');
+
+  let descuentoValor = (monto * descuentoPorcentaje) / 100;
+  let total = monto - descuentoValor + extras;
+
+  view.innerHTML = `
+  <table class="agendar-tabla">
+    <thead>
+      <tr>
+        <th>Concepto</th>
+        <th>Monto (€)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Servicio</td>
+        <td class="agendar-tabla-monto">${monto}€</td>
+      </tr>
+      <tr>
+        <td>Descuento al servicio por los dias seleccionados</td>
+        <td class="agendar-tabla-monto">-${descuentoValor}€</td>
+      </tr>
+      <tr>
+        <td>Extras</td>
+        <td class="agendar-tabla-monto">${extras}€</td>
+      </tr>
+      <tr>
+        <td>Total a pagar</td>
+        <td class="agendar-tabla-monto">${total}€</td>
+      </tr>
+    </tbody>
+  </table>
+  `;
+};
+
 let monto = 0;
+
 const setAmount = (value) => {
   switch (value) {
     case 'babor-spress':
@@ -84,10 +122,61 @@ const setAmount = (value) => {
       monto = 0;
       break;
   }
-
-  console.log('monto', monto);
 };
 
 document.getElementById('servicio').addEventListener('change', function () {
   setAmount(this.value);
+  presupuestoView(monto, descuentoPorcentaje, extras);
+});
+
+//Duración
+
+let duration = 0;
+let descuentoPorcentaje = 0;
+
+const setDuration = (daysStr) => {
+  const days = Number(daysStr);
+
+  if (days <= 1) {
+    descuentoPorcentaje = 0;
+  } else if (days > 1 && days < 8) {
+    descuentoPorcentaje = 5;
+  } else if (days >= 8 && days < 15) {
+    descuentoPorcentaje = 10;
+  } else if (days >= 15 && days < 20) {
+    descuentoPorcentaje = 15;
+  } else if (days >= 20 && days < 30) {
+    descuentoPorcentaje = 20;
+  } else if (days >= 30) {
+    descuentoPorcentaje = 40;
+  } else {
+    descuentoPorcentaje = 0;
+  }
+
+  duration = days;
+};
+
+document.getElementById('duracion').addEventListener('change', function () {
+  setDuration(this.value);
+  presupuestoView(monto, descuentoPorcentaje, extras);
+});
+
+// Extras
+let extras = 0;
+const setExtras = (value, isAdd) => {
+  if (isAdd) {
+    extras = extras + value;
+  } else {
+    extras = extras - value;
+  }
+};
+
+document.getElementById('extra-diez').addEventListener('change', function () {
+  setExtras(5, this.checked);
+  presupuestoView(monto, descuentoPorcentaje, extras);
+});
+
+document.getElementById('extra-masaje').addEventListener('change', function () {
+  setExtras(10, this.checked);
+  presupuestoView(monto, descuentoPorcentaje, extras);
 });

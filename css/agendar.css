@@ -83,3 +83,35 @@
 .agendar-exitoso{
   color: rgb(134, 247, 168);
 }
+
+
+/* extras */
+
+.extras-subtitle{
+margin-top: 25px;
+color: #c63d8f;
+}
+
+.agendar-extras{
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.agendar-extras label{
+  margin: 0;
+  margin-left: 5px;
+}
+
+/* Presupuesto tabla */
+
+.agendar-tabla{
+  background-color: white;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.agendar-tabla-monto{
+  text-align: end;
+}
