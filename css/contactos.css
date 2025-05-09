@@ -11,16 +11,18 @@
   background-size: cover;
 }
 
-.contacto-mapa-contenedor {
+.contacto-oscuro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
   width: 100%;
-  height: 600px;
+  height: 100%;
+  background-color: #00000099;
 }
 
-#contacto-mapa {
-  width: 100%;
-  height: 600px;
-  border: 1px solid #ccc;
-  margin: 20px auto;
+#map {
+  height: 500px;
 }
 
 .contacto-mensaje-container {

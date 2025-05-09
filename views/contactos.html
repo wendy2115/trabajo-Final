@@ -5,10 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contactos</title>
     <link rel="shortcut icon" href="../images/Spa.svg" type="image/x-icon" />
+    <!-- Llamar estilos de la librería -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
     <link rel="stylesheet" href="../css/componentes.css" />
     <link rel="stylesheet" href="../css/contactos.css" />
   </head>
   <body>
+    <!-- Ruta de la ubicación de mi negocio -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.min.js"></script>
+    <script src="https://unpkg.com/lrm-openrouteservice/dist/lrm-openrouteservice.min.js"></script>
+    <script src="../js/rutaMapa.js"></script>
+
     <header class="header-container">
       <div class="header-logo-container">
         <a href="index.html" class="header-logo-link">
@@ -46,6 +57,12 @@
     </header>
 
     <div class="contacto-container">
+      <div class="contacto-oscuro"></div>
+      <!--Para que la imágen de fondo se vea un poco oscura-->
+
+      <!-- Ruta de la ubicación de mi negocio -->
+      <div id="map"></div>
+
       <div class="contacto-mensaje-container">
         <h2>Contacto para cualquier consulta</h2>
         <div class="contacto-mensaje-datos">
@@ -74,10 +91,6 @@ Cordial saludo...
           <button class="contacto-enviar">Enviar</button>
         </div>
       </div>
-    </div>
-
-    <div class="contacto-mapa-contenedor">
-      <div id="contacto-mapa"></div>
     </div>
 
     <footer class="footer-container">
@@ -184,8 +197,5 @@ Cordial saludo...
         </div>
       </div>
     </footer>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="../js/rutaMapa.js"></script>
   </body>
 </html>
